@@ -18,9 +18,60 @@
 		background-color: var(--dark-color);
 		background-image: radial-gradient(var(--first-color) 2px, transparent 0);
 		background-size: 30px 30px;
-		background-position: -5px -5px margin: 0;
-		padding: 0;
+		background-position: -5px -5px;
+     margin: 0;
+		padding: 0px;
 	}
+
+  .cursor {
+    /* Basic cursor styling */
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute; /* Position the cursor relative to its closest positioned ancestor */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%); /* Center the cursor */
+    border-radius: 6px;
+    background: transparent;
+	background-color: var(--first-color);
+    pointer-events: none; /* Ensure the cursor doesn't interfere with mouse events on other elements */
+    z-index: 111; /* Set a high z-index to ensure the cursor is above other elements */
+    border: 3px solid var(--white-color); /* Border styling */
+    transition: transform 0.2s ease-out; /* Smooth transition for cursor changes */
+    animation: moveCursor1 1s infinite alternate; /* Animation for cursor scaling */
+}
+
+.expand {
+    background: transparent;
+    animation: moveCursor2 0.5s forwards; /* Animation for cursor expansion when clicked */
+    border: 2px solid var(--white-color); /* Border styling */
+}
+
+/* Animation keyframes for cursor scaling */
+@keyframes moveCursor1 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0.8);
+    }
+}
+
+/* Animation keyframes for cursor expansion when clicked */
+@keyframes moveCursor2 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0; /* Fade out the cursor at the end of the animation */
+    }
+}
+
 
 	/* Track */
 	::-webkit-scrollbar-track {
@@ -435,7 +486,7 @@
 		}
 
 		.image_card {
-			border-radius:25px;
+			border-radius:16px;
 			box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 
 			@include mQ(470px) {
@@ -666,7 +717,7 @@
 		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 		backdrop-filter: blur(1px);
 		-webkit-backdrop-filter: blur(1px);
-		border-radius: 10px;
+		border-radius: 16px;
 		border: 1px solid rgba(255, 255, 255, 0.18);
 		margin-bottom: 20px;
 		padding: 20px;
@@ -691,6 +742,12 @@
 	.child2:hover > .card:not(:hover) {
 		filter: blur(3px);
 		transform: scale(0.9, 0.9);
+	}
+
+	.card img{
+		height: 70px;
+		width: 70px;
+		margin-top: -50px;
 	}
 
 	.animated-heading {
@@ -730,7 +787,7 @@
 		top: -30px;
 		left: 50%;
 		transform: translateX(-50%);
-		color: #fff;
+		color: var(--white-color);
 		padding: 6px 10px;
 		border-radius: 5px;
 		opacity: 0;
@@ -753,9 +810,12 @@
 		align-items: center;
 		width: 50px;
 		height: 50px;
-		border-radius: 50%;
-		color:var(--dark-color-alt);
+		border-radius: 12px;
+		color:var(--white-color);
+		background-color: var(--dark-color-alt);
 		transition: all 0.3s ease-in-out;
+		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+
 	}
 
 	.example-2 .icon-content a:hover {
@@ -840,4 +900,8 @@
 
 	.client:last-child {
 		margin-right: 0;
+	}
+
+	.spline-watermark{
+		display: none !important;
 	}
