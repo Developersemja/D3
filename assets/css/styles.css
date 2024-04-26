@@ -113,6 +113,9 @@
 		--small:1em;
 	}
 
+	
+
+
 	@media screen and (min-width: 768px) {
 		:root {
 			--normal-font-size: 1rem;
@@ -159,6 +162,14 @@
 	}
 
 	/*===== HEADER =====*/
+
+	.header__{
+		height: auto;
+		width: 100%;
+		display:flex ;
+		align-items: center;
+		justify-content: center;
+	}
 	.header {
 		width: 40%;
 		height: var(--header-height);
@@ -178,9 +189,23 @@
 		-ms-flex-align: center;
 		align-items: center;
 		margin-top: 10px;
-		margin-left: 500px;
+		/*margin-left: 500px*/;
 		border-radius: 16px;
 		background-color: black;
+	}
+
+	@media screen and (min-width: 1024px) {
+		.header {
+			width: 60%;
+			margin-left: 200px;
+		}
+	}
+
+	@media screen and (min-width: 1440px) {
+		.header {
+			width: 40%;
+			margin-left:550px;
+		}
 	}
 
 	.header__logo {
@@ -431,9 +456,29 @@
 		margin: 0px;
 	}
 
+	@media screen and (min-width: 1440px) {
+		.about_child2 p {
+			font-size: var(--small)!important;
+		}	
+		.animated-heading{
+			font-size: var(--large)!important;
+		}
+	}
+
+
+
 	.about_child2 p {
 		text-align: justify;
 		color: var(--dark-color-alt);
+	}
+
+	@media screen and (min-width: 1024px) {
+		.about_child2 p {
+			font-size: 12px;
+		}	
+		.animated-heading{
+			font-size: 40px;
+		}
 	}
 
 	.about_child1 > a {
@@ -670,6 +715,44 @@
 		margin: 0%;
 	}
 
+	@media screen and (min-width: 1024px) {
+		.child1 h1{
+			font-size: 40px;
+		}	
+		.child1 p {
+			font-size: 12px !important;
+			
+		}
+
+		.child2 p{
+			font-size: 12px !important;
+		}
+		.card {
+			padding: 10px;
+		}
+
+
+	}
+
+	@media screen and (min-width: 1440px) {
+		.child1 h1{
+			font-size: 40px;
+		}	
+		.child1 p {
+			font-size: var(--small) !important;
+			
+		}
+
+		.child2 p{
+			font-size: var(--small) !important;
+		}
+		.card {
+			padding: 20px;
+		}
+
+
+	}
+
 	.child1 h4 {
 		color: var(--white-color);
 		font-size: var(--medium);
@@ -694,25 +777,7 @@
 		font-weight: 500;
 	}
 
-	.child1 > a {
-		margin-left: 375px;
-		text-decoration: none;
-		color: rgb(243, 228, 228)
-	}
-
-	.child2 > a {
-		margin-left: 375px;
-		text-decoration: none;
-		color: rgb(103, 101, 96)
-	}
-
-	.child1 > a:hover {
-		text-decoration: underline;
-	}
-
-	.child2 > a:hover {
-		text-decoration: underline;
-	}
+	
 
 	.card {
 		cursor: pointer;
@@ -819,6 +884,17 @@
 		transition: all 0.3s ease-in-out;
 		box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
 
+	}
+
+	@media screen and (min-width: 1024px) {
+		.example-2 .icon-content a{
+			width: 45px;
+		    height: 45px;
+		}	
+		.icon-content svg{
+			width: 40px;
+		    height: 40px;
+		}
 	}
 
 	.example-2 .icon-content a:hover {
@@ -1002,6 +1078,18 @@
 	flex-direction: column;
   }
   
+  @media screen and (min-width: 1024px) {
+	.blog-title p{
+		font-size: 12px!important;
+	}
+  }
+
+  @media screen and (min-width: 1440px) {
+	.blog-title p{
+		font-size: var(--small)!important;
+	}
+  }
+
   .button {
 	display: inline-block;
 	border-radius: 7px;
@@ -1047,71 +1135,46 @@
 	right: 0;
    }
 
-   /* Your existing CSS styles */
-.inputbox {
-	position: relative;
-	width: 196px;
-	display:flex;
-	flex-direction:row;
+   @media screen and (max-width: 600px) {
+	.header{
+		margin-left: 100px;
+	}
+
+	.about{
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+	.about_child1{
+		width: 98%;
+	}
+	.about_child2{
+		width: 98%;
+	}
+	.parent{
+		display: flex;
+		flex-direction: column;
+		height: auto;
+	}
+	.child1{
+		width: 100%;
+	}
+	.child2{
+		width: 98%;
+		margin-left: 0%;
+	}
+	.blog-gallery{
+		display: flex;
+		flex-direction: column;
+	}
+	.gallery-01{
+		width: 98%;
+	}
+	.blog-title{
+		width: 98%;
+	}
+	.gallery{
+		margin-top: 20px;
+		width: 98%;
+	}
   }
-  
-  .inputbox input,
-  .inputbox textarea {
-	position: relative;
-	width: 100%;
-	padding: 20px 10px 10px;
-	background: transparent;
-	outline: none;
-	box-shadow: none;
-	border: none;
-	color: #23242a;
-	font-size: 1em;
-	letter-spacing: 0.05em;
-	transition: 0.5s;
-	z-index: 10;
-  }
-  
-  .inputbox textarea {
-	min-height: 100px; /* Adjust height as needed */
-  }
-  
-  .inputbox span {
-	position: absolute;
-	left: 0;
-	padding: 20px 10px 10px;
-	font-size: 1em;
-	color: #8f8f8f;
-	letter-spacing: 00.05em;
-	transition: 0.5s;
-	pointer-events: none;
-  }
-  
-  .inputbox input:valid ~span,
-  .inputbox input:focus ~span,
-  .inputbox textarea:valid ~span,
-  .inputbox textarea:focus ~span {
-	color: #45f3ff;
-	transform: translateX(-10px) translateY(-34px);
-	font-size: 0,75em;
-  }
-  
-  .inputbox i {
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 2px;
-	background: #45f3ff;
-	border-radius: 4px;
-	transition: 0.5s;
-	pointer-events: none;
-	z-index: 9;
-  }
-  
-  .inputbox input:valid ~i,
-  .inputbox input:focus ~i,
-  .inputbox textarea:valid ~i,
-  .inputbox textarea:focus ~i {
-	height: 44px;
-  }
-  
