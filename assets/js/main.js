@@ -11,55 +11,108 @@ closeMenu.addEventListener('click', () => {
    navMenu.classList.remove('show')
 })
 /*===== ACTIVE AND REMOVE MENU =====*/
-const navLink = document.querySelectorAll('.nav__link');
-
-function linkAction() {
-   /*Active link*/
-   navLink.forEach(n => n.classList.remove('active'));
-   this.classList.add('active');
-
-   /*Remove menu mobile*/
-   navMenu.classList.remove('show')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction));
-
-// Function to scramble text
-function scrambleText(text) {
-   return text.split('').sort(() => Math.random() - 0.5).join('');
-}
-// Function to animate text scramble
-function animateTextScramble(element, newText, duration) {
-   let startTime = null;
-   const updateText = (currentTime) => {
-      if (!startTime) startTime = currentTime;
-      const elapsedTime = currentTime - startTime;
-      const progress = Math.min(elapsedTime / duration, 1);
-      const scrambledText = scrambleText(newText);
-      element.textContent = progress === 1 ? newText : scrambledText;
-      if (progress < 1) {
+document.addEventListener("DOMContentLoaded", function() {
+   const navLinks = document.querySelectorAll('.nav__link');
+   const sections = document.querySelectorAll(".section");
+ 
+   function linkAction() {
+     /* Active link */
+     navLinks.forEach(n => n.classList.remove('active'));
+     this.classList.add('active');
+ 
+     /* Remove menu mobile */
+     navMenu.classList.remove('show')
+   }
+   navLinks.forEach(n => n.addEventListener('click', linkAction));
+ 
+   // Function to check if an element is in viewport
+   function isInViewport(element) {
+     const rect = element.getBoundingClientRect();
+     return (
+       rect.top >= 0 &&
+       rect.left >= 0 &&
+       rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+       rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+     );
+   }
+ 
+   // Function to update active navigation link
+   function updateActiveLink() {
+     sections.forEach((section, index) => {
+       if (isInViewport(section)) {
+         navLinks.forEach(link => link.classList.remove("active"));
+         navLinks[index].classList.add("active");
+       }
+     });
+   }
+ 
+   // Initial check for active link
+   updateActiveLink();
+ 
+   // Event listener for scrolling
+   window.addEventListener("scroll", function() {
+     updateActiveLink();
+   });
+ 
+   // Event listener for navigation links
+   navLinks.forEach(link => {
+     link.addEventListener("click", function(event) {
+       event.preventDefault();
+       const targetId = this.getAttribute("href");
+       const targetSection = document.querySelector(targetId);
+       const targetPosition = targetSection.offsetTop;
+ 
+       window.scrollTo({
+         top: targetPosition,
+         behavior: "smooth"
+       });
+     });
+   });
+ 
+   // Function to scramble text
+   function scrambleText(text) {
+     return text.split('').sort(() => Math.random() - 0.5).join('');
+   }
+ 
+   // Function to animate text scramble
+   function animateTextScramble(element, newText, duration) {
+     let startTime = null;
+     const updateText = (currentTime) => {
+       if (!startTime) startTime = currentTime;
+       const elapsedTime = currentTime - startTime;
+       const progress = Math.min(elapsedTime / duration, 1);
+       const scrambledText = scrambleText(newText);
+       element.textContent = progress === 1 ? newText : scrambledText;
+       if (progress < 1) {
          requestAnimationFrame(updateText);
-      }
-   };
-   requestAnimationFrame(updateText);
-}
-// Function to animate text scramble when element is in viewport
-function animateTextOnViewport(entries, observer) {
-   entries.forEach(entry => {
-      if (entry.isIntersecting) {
+       }
+     };
+     requestAnimationFrame(updateText);
+   }
+ 
+   // Function to animate text scramble when element is in viewport
+   function animateTextOnViewport(entries, observer) {
+     entries.forEach(entry => {
+       if (entry.isIntersecting) {
          const titleElement = entry.target.querySelector('h1');
          animateTextScramble(titleElement, titleElement.textContent, 1000); // Adjust duration as needed
          observer.unobserve(entry.target);
-      }
+       }
+     });
+   }
+ 
+   // Create an Intersection Observer instance
+   const observer = new IntersectionObserver(animateTextOnViewport, {
+     threshold: 1.0
+   }); // Adjust threshold as needed
+ 
+   // Observe all elements with class 'title'
+   document.querySelectorAll('.title').forEach(titleElement => {
+     observer.observe(titleElement);
    });
-}
-// Create an Intersection Observer instance
-const observer = new IntersectionObserver(animateTextOnViewport, {
-   threshold: 1.0
-}); // Adjust threshold as needed
-// Observe all elements with class 'title'
-document.querySelectorAll('.title').forEach(titleElement => {
-   observer.observe(titleElement);
-});
+ });
+ 
+ 
 
 
 //Banner
@@ -253,3 +306,17 @@ document.addEventListener('click', e => {
         cursor.classList.remove("expand");
     }, 500);
 });
+
+function sendemail(){
+   Email.send({
+      Host : "smtp.elasticemail.com",
+      Username : "username",
+      Password : "password",
+      To : 'them@website.com',
+      From : "you@isp.com",
+      Subject : "This is the subject",
+      Body : "And this is the body"
+  }).then(
+    message => alert(message)
+  );
+}

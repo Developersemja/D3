@@ -40,24 +40,20 @@
           </div>
           <div class="nav__menu">
             <ul class="nav__list">
-              <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+              <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Service</a>
+                <a href="#service" class="nav__link" >Service</a>
               </li>
               <li class="nav__item">
                 <a href="#" class="nav__link">Pricing</a>
               </li>
-              <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+              <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
               <li class="nav__item">
-                <a href="#" class="nav__link">Contact</a>
+                <a href="#contact" class="nav__link">Contact</a>
               </li>
             </ul>
           </div>
-          <!--- <div class="nav__social">
-                    <a href="#" class="nav__social-icon"><ion-icon name="logo-linkedin"></ion-icon></a>
-                    <a href="#" class="nav__social-icon"><ion-icon name="logo-github"></ion-icon></a>
-                    <a href="#" class="nav__social-icon"><ion-icon name="logo-behance"></ion-icon></a>
-                </div>-->
+ 
         </div>
       </nav>
     </header>
@@ -65,7 +61,7 @@
     <!--Header section ends-->
 
     <!--Banner Section-->
-    <div class="banner">
+    <div class="banner" >
       <div class="banner__content">
         <div class="left-container">
           <h1>We Do</h1>
@@ -88,7 +84,7 @@
     <!--Banner section ends-->
 
     <!--About Us Section Begins-->
-    <div class="about">
+    <div class="about" id="about">
       <div class="about_child1">
         <section class="image-section">
           <div class="image_card">
@@ -281,7 +277,7 @@
     <!--About Us Section ends-->
 
     <!--Service section-->
-    <div class="parent">
+    <div class="parent" id="service">
       <div class="child1">
         <div>
           <h1 class="animated-heading">Service</h1>
@@ -412,19 +408,19 @@
     <!--clients end-->
 
     <!--Blog Cluster-->
-    <section class="blog-gallery">
+    <section class="blog-gallery" id="blog">
       <div class="gallery-01">
         <figure class="gallery__item gallery__item--1">
-            <img src="/assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 1" class="gallery__img">
+            <img src="assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 1" class="gallery__img">
         </figure>
         <figure class="gallery__item gallery__item--2">
-            <img src="/assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 2" class="gallery__img">
+            <img src="assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 2" class="gallery__img">
         </figure>
         <figure class="gallery__item gallery__item--3">
-            <img src="/assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 3" class="gallery__img">
+            <img src="assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 3" class="gallery__img">
         </figure>
         <figure class="gallery__item gallery__item--4">
-            <img src="/assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 4" class="gallery__img">
+            <img src="assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 4" class="gallery__img">
         </figure>
         
       </div>
@@ -437,23 +433,95 @@
 
       <div class="gallery">
       <figure class="gallery__item gallery__item--1">
-          <img src="/assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 1" class="gallery__img">
+          <img src="assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 1" class="gallery__img">
       </figure>
       <figure class="gallery__item gallery__item--2">
-          <img src="/assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 2" class="gallery__img">
+          <img src="assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 2" class="gallery__img">
       </figure>
       <figure class="gallery__item gallery__item--3">
-          <img src="/assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 3" class="gallery__img">
+          <img src="assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 3" class="gallery__img">
       </figure>
       <figure class="gallery__item gallery__item--4">
-          <img src="/assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 4" class="gallery__img">
+          <img src="assets/img/bohemian-man-with-his-arms-crossed.jpg" alt="Gallery image 4" class="gallery__img">
       </figure>
+    </section>
      
+
+    <!--Contact Form-->
+    <section class="contact-form" id="contact">
+      <div class="custom-background">
+        <div class="custom-container">
+          <div class="custom-screen">
+            <div class="custom-screen-header">
+              <div class="custom-screen-header-left">
+                <div class="custom-screen-header-button custom-close"></div>
+                <div class="custom-screen-header-button custom-maximize"></div>
+                <div class="custom-screen-header-button custom-minimize"></div>
+              </div>
+              <div class="custom-screen-header-right ">
+                <div class="custom-screen-header-ellipsis"></div>
+                <div class="custom-screen-header-ellipsis"></div>
+                <div class="custom-screen-header-ellipsis"></div>
+                
+              </div>
+            </div>
+            <div class="custom-screen-body">
+              <div class="custom-screen-body-item custom-left">
+                <div class="custom-app-title">
+                  <span>CONTACT</span>
+                  <span>US</span>
+                </div>
+                <div class="custom-app-contact">D3</div>
+              </div>
+              <div class="custom-screen-body-item">
+                <div class="custom-app-form">
+                  <form onsubmit="sendmail();reset();return false;" > 
+                  <div class="custom-app-form-group">
+                    <input class="custom-app-form-control" placeholder="NAME" type="text" >
+                   </div>
+                   <div class="custom-app-form-group">
+                    <input class="custom-app-form-control" placeholder="EMAIL" type="email">
+                   </div>
+                   <div class="custom-app-form-group">
+                    <input class="custom-app-form-control" placeholder="CONTACT NO" type="tel">
+                   </div>
+                   <div class="custom-app-form-group custom-message">
+                    <input class="custom-app-form-control" placeholder="MESSAGE" type="text">
+                   </div>
+
+                  <div class="custom-app-form-group custom-buttons">
+                   
+                    <button  type="submit" class="button blog-button" style="vertical-align:middle"><span>🚀</span></button>
+                  </div>
+                </form>
+                </div>
+              </div>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+
+      <div class="get_in_touch">
+        <h1 class="animated-heading"> Get in Touch with us</h1>
+        <div class="address">
+          <p>Building , 5th Floor, Chateau D Ampa, No.37, opposite Nitya Amirtham Sweets, Nelson Manickam Rd, Aminjikarai, Tamil Nadu 600029</p>
+          <p>09585595737</p>
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.4378207202294!2d80.22065527575661!3d13.07141561268059!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a2cfbf18238f%3A0x3797f18026bec563!2sSemja!5e0!3m2!1sen!2sin!4v1714197908360!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+      
+    </section>
+
+    <footer>
+      <div class="footer">&copy; <strong>D3</strong>. All rights reserved</div>
+    </footer>
 
 
     <!-- ===== IONICONS ===== -->
     <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
   </body>
 </html>
