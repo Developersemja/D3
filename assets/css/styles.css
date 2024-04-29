@@ -8,7 +8,7 @@
 	}
 
 	html {
-		cursor: url("/D3/assets/img/cursor.svg") 3 3, auto;
+		cursor: url("/assets/img/cursor.svg") 3 3, auto;
 	}
 
 	body {
@@ -1467,3 +1467,17 @@
 		background-color: var(--first-color) !important; /* Change the background color for the active section */
 		/* Change the text color for better visibility */
 	  }
+
+	.stroke{
+		-webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgba(255, 255, 255, 0.5);
+    font-size: 203px;
+    color: transparent;
+    position: absolute;
+    z-index: -1;
+    width: 100vh;
+    margin-top: -371px;
+    margin-left: 995px;
+    font-weight:500;
+		
+	}
