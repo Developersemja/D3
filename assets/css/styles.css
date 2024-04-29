@@ -1189,6 +1189,26 @@
 		margin-top: 20px;
 		width: 98%;
 	}
+	.contact-form{
+		flex-direction: column;
+	}
+	.custom-app-form{
+		width: 300px !important;
+	}
+	.get_in_touch iframe{
+		width: 100% !important;
+		height: 40vh !important;
+	}
+
+	.animated-heading{
+		font-size: 50px !important;
+	}
+  }
+
+  @media screen and (max-width: 305px){
+	.custom-app-form{
+		width: 250px !important;
+	}
   }
 
   .custom-background {
