@@ -503,24 +503,25 @@
               </div>
               <div class="custom-screen-body-item">
                 <div class="custom-app-form">
-                  <form onsubmit="sendmail();reset();return false;" > 
+                <form action="https://api.web3forms.com/submit" method="POST"  > 
+                    <input type="hidden" name="access_key" value="f052c221-e149-4d34-8bcd-0583090a943c">
                   <div class="custom-app-form-group">
-                    <input class="custom-app-form-control" placeholder="NAME" type="text" >
+                    <input class="custom-app-form-control" placeholder="NAME" type="text" name="name" >
                    </div>
                    <div class="custom-app-form-group">
-                    <input class="custom-app-form-control" placeholder="EMAIL" type="email">
+                    <input class="custom-app-form-control" placeholder="EMAIL" type="email" name="email">
                    </div>
                    <div class="custom-app-form-group">
-                    <input class="custom-app-form-control" placeholder="CONTACT NO" type="tel">
+                    <input class="custom-app-form-control" placeholder="CONTACT NO" type="tel"  name="phone">
                    </div>
                    <div class="custom-app-form-group custom-message">
-                    <input class="custom-app-form-control" placeholder="MESSAGE" type="text">
+                    <input class="custom-app-form-control" placeholder="MESSAGE" type="text" name="message"> 
                    </div>
-
                   <div class="custom-app-form-group custom-buttons">
-                   
+                    
                     <button  type="submit" class="button blog-button" style="vertical-align:middle"><span>🚀</span></button>
                   </div>
+                  <script src="https://web3forms.com/client/script.js" async defer></script>
                 </form>
                 </div>
               </div>

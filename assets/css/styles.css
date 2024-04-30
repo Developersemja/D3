@@ -17,6 +17,7 @@ body {
   background-position: -5px -5px;
   margin: 0;
   padding: 0px;
+  overflow-x: hidden !important;
 }
 
 .cursor {
@@ -1508,6 +1509,14 @@ ul {
 }
 
 #myLottiePlayer{
-  height: 800px;
-  width: 800px;
+  height: 750px;
+  width: 750px;
+  margin-left: -95px;
+}
+
+input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: transparent !important;
+  color: fieldtext !important;
 }
