@@ -69,6 +69,7 @@ document.addEventListener("DOMContentLoaded", function() {
      });
    });
  
+ 
    // Function to scramble text
    function scrambleText(text) {
      return text.split('').sort(() => Math.random() - 0.5).join('');
