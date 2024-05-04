@@ -14,11 +14,11 @@
 	background: var(--first-color);
   }
 
- * {
+ /* * {
 	outline: 1px solid red !important;
 	opacity: 1 !important;
 	visibility: visible;
- } 
+ } */
 
 html {
 	cursor: url("/assets/img/cursor.svg") 3 3, auto;
@@ -183,6 +183,7 @@ img {
 	margin-top: 10px;
 	border-radius: 16px;
 	background-color: black;
+	margin-left: 550px;
 }
 
 .header__logo {
@@ -1440,7 +1441,7 @@ ul {
 		justify-content: center;
 	}
 
-	.lottie-animation #myLottiePlayer {
+	 #myLottiePlayer {
 		height: 400px !important;
 		width: 400px !important;
 		margin-left: 0px !important;
@@ -1583,7 +1584,7 @@ ul {
 	}
 	.header {
 		height: calc(var(--header-height) + 1rem);
-		margin-left: 200px;
+	
 		z-index: -1px;
 	}
 
@@ -1726,8 +1727,8 @@ ul {
 }
 
 #myLottiePlayer {
-	height: 650px !important;
-	width: 650px !important;
+	height: 650px ;
+	width: 650px ;
 	margin-left: -95px;
 }
 
@@ -2039,7 +2040,9 @@ input:-internal-autofill-selected {
     .main-heading {
         font-size: 36px !important; /* Adjust this value as needed for tablets */
     }
-
+	.header {
+		margin-left: 200px;
+	}
 	.text{
 		font-size: 30px;
 	}
@@ -2114,4 +2117,24 @@ input:-internal-autofill-selected {
 	.about_child1{
 		margin-left: 0px;
 	}
+}
+
+@media screen and (min-width: 1030px) and (max-width: 1440px) {
+
+	.main-heading{
+		font-size: 60px !important;
+	}
+	.custom-screen-body-item {
+        padding: 20px;
+    }
+	.get_in_touch iframe {
+        width: 95vh;
+    }
+	.stroke {
+        font-size: 115px;
+    }
+	.header {
+
+        margin-left: 410px;
+    }
 }
