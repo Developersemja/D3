@@ -2377,3 +2377,10 @@ input:-internal-autofill-selected {
 .about.service {
 	height: 50vh;
 }
+
+.singlepost {
+   
+    background: var(--first-color);
+    border-radius: 16px;
+
+}
