@@ -632,7 +632,7 @@
                         </div>
                         <div class="custom-screen-body-item">
                             <div class="custom-app-form">
-                                <form action="https://api.web3forms.com/submit" method="POST" onsubmit="clearForm(event)">
+                                <!--<form action="https://api.web3forms.com/submit" method="POST" onsubmit="clearForm(event)">
                                     <input type="hidden" name="access_key" value="f052c221-e149-4d34-8bcd-0583090a943c">
                                     <div class="custom-app-form-group">
                                         <input class="custom-app-form-control" placeholder="NAME" type="text" name="name" required>
@@ -651,7 +651,63 @@
                                     </div>
                                     <input type="hidden" name="redirect" value="">
                                     <script src="https://web3forms.com/client/script.js" async defer></script>
+                                </form>-->
+
+                                <form  method="POST"  data-netlify="true">
+                                    <div class="custom-app-form-group">
+                                        <input class="custom-app-form-control" placeholder="NAME" type="text" name="name" required>
+                                    </div>
+                                    <div class="custom-app-form-group">
+                                        <input class="custom-app-form-control" placeholder="EMAIL" type="email" name="email" required>
+                                    </div>
+                                    <div class="custom-app-form-group">
+                                        <input class="custom-app-form-control" placeholder="CONTACT NO" type="tel" name="phone" required>
+                                    </div>
+                                    <div class="custom-app-form-group custom-message">
+                                        <input class="custom-app-form-control" placeholder="MESSAGE" type="text" name="message" required>
+                                    </div>
+                                    <div class="custom-app-form-group custom-buttons">
+                                        <button type="submit" class="button blog-button" style="vertical-align:middle"><span>🚀</span></button>
+                                    </div>
                                 </form>
+
+                             <!-- <form name="contact" method="POST">
+                                    <div class="custom-app-form-group">
+                                    <p>
+                                      <label>Your Name: <input type="text" name="name" /></label>
+                                    </p>
+                                    </div>
+                                    <div class="custom-app-form-group">
+                                    <p>
+                                      <label>Your Email: <input type="email" name="email" /></label>
+                                    </p>
+                                    </div>
+                                    <div class="custom-app-form-group">
+                                    <p>
+                                      <label>Your Role: <select name="role[]" multiple>
+                                        <option value="leader">Leader</option>
+                                        <option value="follower">Follower</option>
+                                      </select></label>
+                                    </p>
+                                    </div>
+                                    <div class="custom-app-form-group">
+                                    <p>
+                                      <label>Message: <textarea name="message"></textarea></label>
+                                    </p>
+                                    </div>
+                                    <div class="custom-app-form-group custom-buttons">
+                                    <p>
+                                      <button type="submit">Send</button>
+                                    </p>
+                                    </div>
+                                  </form> -->
+                                  
+
+
+
+
+
+
                             </div>
                         </div>
                     </div>
