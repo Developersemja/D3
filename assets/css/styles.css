@@ -1065,12 +1065,13 @@ input:-internal-autofill-selected {
 }
 
 .pricing {
-	height: 100vh;
+	height: auto;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 50px;
 }
 
 .divider-1 {
@@ -1192,6 +1193,7 @@ input:-internal-autofill-selected {
 
 .price_card p {
 	font-size: 3rem;
+	margin:0px;
 }
 
 .price_card .info {
@@ -1555,7 +1557,7 @@ input:-internal-autofill-selected {
 	}
 
 	.blog-gallery {
-		height: 60vh;
+		height: auto;
 	}
 
 	.custom-background {
@@ -2170,13 +2172,13 @@ input:-internal-autofill-selected {
 	margin-bottom: .8rem;
 	width: 56px;
 	height: 56px;
-	background-color: var(--first-color);
-	border-radius: 50%;
+	/*background-color: var(--first-color);*/
+	/*border-radius: 50%;*/
 	overflow: hidden;
 }
 
 .nav__img img {
-	width: 46px;
+	width: 32px;
 }
 
 .nav__name {
@@ -2269,7 +2271,7 @@ input:-internal-autofill-selected {
 	}
 
 	.nav__img img {
-		width: 26px;
+		width: 32px;
 	}
 
 	.nav__list {
