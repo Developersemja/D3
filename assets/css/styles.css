@@ -2456,9 +2456,9 @@ input:-internal-autofill-selected {
 .service-c{
   background-color: var(--first-color);
   border-radius: 18px;
-  padding: 10px;
+  padding: 20px;
   width: 30%;
-  height: 250px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
