@@ -1966,6 +1966,10 @@ input:-internal-autofill-selected {
     font-size: 36px !important;
   }
 
+  .service-c{
+    height: 560px !important;
+  }
+
   .text {
     font-size: 30px;
   }
@@ -2045,6 +2049,8 @@ input:-internal-autofill-selected {
   .about_child1 {
     margin-left: 0px;
   }
+
+  
 }
 
 @media screen and (min-width: 1030px) and (max-width: 1440px) {
@@ -2288,6 +2294,10 @@ input:-internal-autofill-selected {
     margin-left: auto;
     margin-right: auto;
   }
+
+  .service-c{
+    height: 450px !important;
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -2355,9 +2365,7 @@ input:-internal-autofill-selected {
   width: 92%;
 }
 
-.service-content p {
-  
-}
+
 
 .about.service {
   height: 50vh;
@@ -2458,7 +2466,7 @@ input:-internal-autofill-selected {
   border-radius: 18px;
   padding: 20px;
   width: 30%;
-  height: 300px;
+  height: 300px !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2486,4 +2494,18 @@ input:-internal-autofill-selected {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.trust01{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.quote{
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 5%;
 }
